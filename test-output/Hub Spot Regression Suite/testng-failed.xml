@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Hub Spot Regression Suite]">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Hub Spot Regression Suite]" parallel="tests">
   <listeners>
-    <listener class-name="com.qa.hubspot.listeners.TestAllureListener"/>
+    <listener class-name="com.qa.hubspot.listeners.ExtentReportListener"/>
   </listeners>
-  <test thread-count="5" name="Hub Spot Functional Regression Test(failed)">
+  <test thread-count="2" name="Hub Spot Functional Regression Test - FF(failed)" parallel="methods">
+    <parameter name="browser" value="firefox"/>
     <classes>
       <class name="com.qa.hubspot.tests.LoginPageTest">
         <methods>
@@ -14,5 +15,5 @@
         </methods>
       </class> <!-- com.qa.hubspot.tests.LoginPageTest -->
     </classes>
-  </test> <!-- Hub Spot Functional Regression Test(failed) -->
+  </test> <!-- Hub Spot Functional Regression Test - FF(failed) -->
 </suite> <!-- Failed suite [Hub Spot Regression Suite] -->

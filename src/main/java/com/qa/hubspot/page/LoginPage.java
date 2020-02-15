@@ -19,7 +19,7 @@ public class LoginPage extends BasePage{
 	By emailID = By.id("username");
 	By password = By.id("password");
 	By loginButton = By.id("loginBtn");
-	By signUpLink = By.linkText("Sign up11111");
+	By signUpLink = By.linkText("Sign up1111");
 	By loginErrorText = By.xpath("//div[@class='private-alert__inner']");
 	
 	public LoginPage(WebDriver driver) {
